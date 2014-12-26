@@ -10,6 +10,9 @@
 		9B77A3B81A4DFD9600269EB5 /* AnimatedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B77A3B71A4DFD9600269EB5 /* AnimatedViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B77A3BE1A4DFD9600269EB5 /* AnimatedViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B77A3B21A4DFD9600269EB5 /* AnimatedViewController.framework */; };
 		9B77A3C51A4DFD9600269EB5 /* AnimatedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77A3C41A4DFD9600269EB5 /* AnimatedViewControllerTests.swift */; };
+		9B77A3CF1A4E010C00269EB5 /* AnimatedViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77A3CE1A4E010C00269EB5 /* AnimatedViewControllerPresenter.swift */; };
+		9B77A3D11A4E017400269EB5 /* AnimatedTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77A3D01A4E017400269EB5 /* AnimatedTransitioner.swift */; };
+		9B77A3D31A4E02B900269EB5 /* AnimatedPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77A3D21A4E02B900269EB5 /* AnimatedPresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		9B77A3BD1A4DFD9600269EB5 /* AnimatedViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimatedViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B77A3C31A4DFD9600269EB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B77A3C41A4DFD9600269EB5 /* AnimatedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedViewControllerTests.swift; sourceTree = "<group>"; };
+		9B77A3CE1A4E010C00269EB5 /* AnimatedViewControllerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedViewControllerPresenter.swift; sourceTree = "<group>"; };
+		9B77A3D01A4E017400269EB5 /* AnimatedTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTransitioner.swift; sourceTree = "<group>"; };
+		9B77A3D21A4E02B900269EB5 /* AnimatedPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedPresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				9B77A3B71A4DFD9600269EB5 /* AnimatedViewController.h */,
 				9B77A3B51A4DFD9600269EB5 /* Supporting Files */,
+				9B77A3CE1A4E010C00269EB5 /* AnimatedViewControllerPresenter.swift */,
+				9B77A3D01A4E017400269EB5 /* AnimatedTransitioner.swift */,
+				9B77A3D21A4E02B900269EB5 /* AnimatedPresentationController.swift */,
 			);
 			path = AnimatedViewController;
 			sourceTree = "<group>";
@@ -209,6 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B77A3D11A4E017400269EB5 /* AnimatedTransitioner.swift in Sources */,
+				9B77A3D31A4E02B900269EB5 /* AnimatedPresentationController.swift in Sources */,
+				9B77A3CF1A4E010C00269EB5 /* AnimatedViewControllerPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,27 +331,32 @@
 		9B77A3C91A4DFD9600269EB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AnimatedViewController/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		9B77A3CA1A4DFD9600269EB5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AnimatedViewController/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
