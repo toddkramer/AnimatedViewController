@@ -74,7 +74,7 @@ func presentExpandingFormSheet() {
 }
 ```
 
-The Slide animation style has its own associated values, **dismissOpposite** and *side*
+The Slide animation style has its own associated values, **dismissOpposite** and **side**
 - **dismissOpposite** will dismiss the form sheet in the opposite direction from which it was presented when set to **true** and will dismiss the form sheet back to its original side when set to **false**
 - **side** is the same enum from above which lets you set the side from which the form sheet will be presented (Left, Right, Top, Bottom)
 
